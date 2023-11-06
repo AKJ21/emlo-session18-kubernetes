@@ -1,0 +1,16 @@
+namespace: kube-system
+
+appName:
+  model: 'gpt-serve'
+
+image:
+  modelServer: 733808140417.dkr.ecr.ap-south-1.amazonaws.com/gpt-k8s:latest
+
+port:
+  modelServer: 9000
+  service: 80
+
+hpaSpecs:
+  maxReplicas: 4
+  minReplicas: 1
+  targetCPUUtilizationPercentage: 50

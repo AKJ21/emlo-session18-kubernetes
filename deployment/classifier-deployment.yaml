@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: gpt-deployment
+    labels:
+        app: gpt
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app.kubernetes.io/name: gpt
+    template:
+        metadata:
+            labels:
+                app.kubernetes.io/name: gpt
+        spec:
+            containers:
+                - name: gpt
+                  image: 733808140417.dkr.ecr.ap-south-1.amazonaws.com/gpt-k8s:latest
+                  ports:
+                      - containerPort: 9000

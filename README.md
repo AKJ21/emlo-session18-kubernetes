@@ -59,7 +59,7 @@ eksctl create iamserviceaccount
 
 ```
 
-![Screenshot](Images/AWS_alb.JPG)
+![Screenshot](Images/AWS_ALB.JPG)
 
 
 

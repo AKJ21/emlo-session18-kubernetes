@@ -70,7 +70,7 @@ helm repo add eks https://aws.github.io/eks-charts
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=basic-cluster2 --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
 ```
 
-## 6. Deploy aws load balancer controller using HELM
+## 7. Deploy aws load balancer controller using HELM
 
 ```
 # 1. Create the helm templates and value yaml. 
@@ -92,9 +92,9 @@ helm ls --all-namespaces
 # 7. Use port forward to access the fast api app
 kubectl port-forward service/gpt-service 80:80 
 ```
-![Screenshot](Images/FASTAPI.JPG)
+![Screenshot](Images/FastAPI.JPG)
 
-## 7. Load Testing
+## 8. Load Testing
 - Create a load file in python to genreate the artifical load on the AWS cluster and test the HPA and CA
 ```
 python load.py
@@ -104,7 +104,7 @@ python load.py
 -Latany after load
 ![Screenshot](Images/Latancy_after_Load.JPG)
 
-## 8. HPA status and Latancy testing
+## 9. HPA status and Latancy testing
 
 - Check scaling of HPA
 ```
